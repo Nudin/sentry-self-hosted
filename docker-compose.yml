@@ -148,6 +148,8 @@ services:
         read_only: true
         source: ./postgres/
         target: /opt/sentry/
+    ports:
+      - 127.0.0.1:5432:5432
   zookeeper:
     <<: *restart_policy
     image: "confluentinc/cp-zookeeper:5.5.0"
